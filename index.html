@@ -9,48 +9,50 @@
 <body>
   
   <div class="container">
-    <div id="createSurvey">
-      <h1>Mini Survey</h1>
-      <br><br>
-      <h4>What would you like to name this Survey?</h4>
-      <br>
-      <form action="#" onsubmit="creatSurvey();">
-      <input type="text" id="surveyName" value="" required />
-      <input type="submit" value="Create" class="btn btn-success">
-      </form>
-    </div>
-
-    <div id="createQuestions">
-      <h1 id="surveyHeader"></h1>
-      <br><br>
-      <div id="qDisplay"></div>
-      <div class="box">
-        <h4>Question Type</h4>
-          <select id="qType" onchange="showOption()">
-            <option value="default"> Choose One </option>
-            <option value="radioButton">Radio Button</option>
-            <option value="checkBox">Check Box</option>
-            <option value="dropDown">Drop Down</option>
-            <option value="openEnd">Text Input</option>
-          </select>        
+    <!-- <div id="createSurveyQ"> -->
+      <div id="createSurveyTitle">
+        <h1>Mini Survey</h1>
         <br><br>
-        <h4>What question do you want to ask?</h4>
-        <input type="text" id="question" value="" required />
-        <br><br>
-        <div id="showMultiOptions">
-          <h4>Multi Choice Options</h4>
-          <input type="text" id="option1" value="" required />
-          <br>
-          <input type="text" id="option2" value="" required />
-          <br>
-          <div id="addInputText"></div>
-          <button class="add-option-button" onclick="addMoreOption();"><span class="glyphicon glyphicon-plus"></span>&nbsp;click to add option</button>
-        </div>
+        <h4>What would you like to name this Survey?</h4>
+        <br>
+        <form action="#" onsubmit="creatSurvey();">
+        <input type="text" id="surveyName" value="" required />
+        <input type="submit" value="Create" class="btn btn-success">
+        </form>
       </div>
-      <br><br>
-      <button class="btn btn-primary" onclick="addMoreQuestion()">Add Another Question</button><button class="btn btn-primary takeSurvey" onclick="takeSurvey();">Done. Let's Take a Survey</button>
-    </div>    
+
+      <div id="createQuestions">
+        <h1 id="surveyHeader"></h1>
+        <div id="qDisplay"></div>
+        <div class="box">
+          <h4 id="qTypeHeader">Question Type</h4>
+            <select id="qType" onchange="showOption()">
+              <option value="default"> Choose One </option>
+              <option value="radioButton">Radio Button</option>
+              <option value="checkBox">Check Box</option>
+              <option value="dropDown">Drop Down</option>
+              <option value="openEnd">Text Input</option>
+            </select>        
+          <br><br>
+          <h4 id="qHeader">What question do you want to ask?</h4>
+          <input type="text" id="question" value="" required />
+          <br><br>
+          <div id="showMultiOptions">
+            <h4 id="multiOptHeader">Multi Choice Options</h4>
+            <input type="text" id="option1" value="" required />
+            <br>
+            <input type="text" id="option2" value="" required />
+            <br>
+            <div id="addInputText"></div>
+            <button class="add-option-button" onclick="addMoreOption();"><span class="glyphicon glyphicon-plus"></span>&nbsp;click to add option</button>
+          </div>
+        </div>
+        <br><br>
+        <button class="btn btn-primary" onclick="addMoreQuestion()">Add Another Question</button><button class="btn btn-primary takeSurvey" onclick="takeSurvey();">Done. Let's Take a Survey</button>
+      </div> 
+    <!-- </div>        -->
   </div>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 <script src="main.js"></script>
 <script src="survey.js"></script>  
 </body>  

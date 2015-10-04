@@ -1,0 +1,33 @@
+div#createQuestions{
+  display: none;
+}
+
+div#displaySurvey {
+  display: none;
+}
+
+div#showMultiOptions {
+  display: none;
+}
+
+div.box {
+  border: 1px solid #ccc;
+  padding: 25px;
+}
+
+.add-option-button {
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    padding: 7px 60px 7px 13px;
+    background-color: #fff;
+    color: #999;
+    font-size: 15px;
+}
+
+#showMultiOptions input {
+  margin: 10px auto;
+}
+
+button.takeSurvey {
+  margin-left: 25px;
+}

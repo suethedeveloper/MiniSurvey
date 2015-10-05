@@ -14,6 +14,7 @@
   var innerDiv = "";
   var idName = "";
   var showoptArr = [];
+  var curIndex = 0;
 
   function creatSurvey(){
     var surveyName = document.getElementById("surveyName");
@@ -151,23 +152,24 @@ console.log('surveyArr',surveyArr);
   }
 
   function displayQuestionR(optArr, displayDiv){
+    curIndex = optArr.length-1;
     innerDiv = document.createElement('div');
-    idName = "question" + optArr.qArr.id;
+    idName = "question" + optArr[curIndex].id;
     innerDiv.id=idName;
 
     displayDiv.appendChild(innerDiv); 
-    showoptArr = optArr.qArr.optionsArr;
-    var inputRadio="<p>" + optArr.qArr.id+". " + optArr.qArr.question + "<br>";
+    showoptArr = optArr[curIndex].optionsArr;
+    var inputRadio="<p>" + optArr[curIndex].id+". " + optArr[curIndex].question + "<br>";
     for(i=0;i<showoptArr.length;i++){
-    inputRadio += "<input id='showoptArr[i]' name='radioB' type='radio'> " + showoptArr[i]+"<br>";
+    inputRadio += "<input id='" + showoptArr[i] + "' name='radioB' type='radio'> " + showoptArr[i]+"<br>";
     }
     document.getElementById(idName).innerHTML = inputRadio;
   }
 
   function displayQuestionC(optArr){
     //get last item in question array
-    var curIndex = optArr.length-1;
-    var innerDiv=document.createElement('div');
+    curIndex = optArr.length-1;
+    innerDiv = document.createElement('div');
     idName = "question" + optArr[curIndex].id;
     innerDiv.id=idName;
 
@@ -182,31 +184,33 @@ console.log('surveyArr',surveyArr);
   }
 
   function displayQuestionD(optArr, displayDiv){
+    curIndex = optArr.length-1;
     innerDiv = document.createElement('div');
-    idName = "question" + optArr.qArr.id;
+    idName = "question" + optArr[curIndex].id;
     innerDiv.id=idName;
     qDisplay.appendChild(innerDiv); 
 
-    showoptArr = optArr.qArr.optionsArr;
-    var inputDrop = "<p>" + optArr.qArr.id +". "+ optArr.qArr.question + "<br>";
+    showoptArr = optArr[curIndex].optionsArr;
+    var inputDrop = "<p>" + optArr[curIndex].id +". "+ optArr[curIndex].question + "<br>";
 
     inputDrop+="<select style='margin:10px' id='showoptArr[i]' style='margin:10px'>";
     inputDrop += "<option value='default'>----</option>";
     for(i=0; i<showoptArr.length; i++){
-    inputDrop += "<option value='showoptArr[i]'>" + showoptArr[i]+"</option>";
+      inputDrop += "<option value='" + showoptArr[i] + "'>" + showoptArr[i] + "</option>";
     }
     inputDrop+="</select>";
     document.getElementById(idName).innerHTML=inputDrop;
   }
 
   function displayQuestionO(optArr, displayDiv){
+    curIndex = optArr.length-1;
     innerDiv = document.createElement('div');
-    idName = "question" + optArr.qArr.id;
-    innerDiv.id=idName;
+    idName = "question" + optArr[curIndex].id;
+    innerDiv.id = idName;
     displayDiv.appendChild(innerDiv); 
-    showoptArr = optArr.qArr.optionsArr;
-    var inputText = "<p>"+ optArr.qArr.id +". " + optArr.qArr.question + "<br>";
-    inputText+="<input type='text'>";
+    showoptArr = optArr[curIndex].optionsArr;
+    var inputText = "<p>"+ optArr[curIndex].id +". " + optArr[curIndex].question + "<br>";
+    inputText += "<input type='text'>";
     document.getElementById(idName).innerHTML = inputText;
   }
 

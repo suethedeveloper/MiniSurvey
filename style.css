@@ -34,8 +34,13 @@ div#qDisplay {
 
 button.takeSurvey {
   margin-left: 25px;
+  display: none;
 }
 
 .error {
   color: red;
+}
+
+div#showSurvey {
+  display: none;
 }

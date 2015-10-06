@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 </head>
-<body>
-  
+<body> 
   <div class="container">
     <div id="createSurveyTitle">
       <h1>Mini Survey</h1>
@@ -47,11 +46,23 @@
         </div>
       </div>
       <br><br>
-      <button class="btn btn-primary" onclick="addMoreQuestion()">Add Another Question</button><button id="takeSurveyBtn" class="btn btn-primary takeSurvey" onclick="takeSurvey();">Let's Take a Survey</button>
+      <button class="btn btn-primary" onclick="addMoreQuestion()">Save & Add more Question</button><button id="takeSurveyBtn" class="btn btn-primary takeSurvey" onclick="takeSurvey();">Let's Take a Survey</button>
     </div>
+
     <div id="showSurvey">
-      <div id="showSurveyDisplay"></div>
+      <h1 id="showSurveyHeader"></h1>
+      <form id="formSubmitSurvey">
+        <div id="showSurveyDisplay"></div>
+        <div id="surveyFormSubmit">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </form>
     </div>
+
+    <div id="showResult">
+        <h1 id="showResultHeader"></h1>
+        <div id="showResultBody"></div>
+    </div>    
   </div><!-- end of container -->
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 <script src="main.js"></script>

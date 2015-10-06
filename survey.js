@@ -5,31 +5,51 @@ function Survey(id, name, qArr){
 }
 
 function RadioButton(id, question, optionsArr){
-  this.type = "radioButton";
   this.id = id;
+  this.type = "radioButton";
   this.question = question;
   this.optionsArr = optionsArr;
+  this.answer = "";
 }
+// RadioButton.prototype.getAnswer = function(){
+//   return this.answer;
+// };
+
+// RadioButton.prototype.setAnswer=function(answer){
+//   this.answer = answer;
+// };
 
 function CheckBox(id, question, optionsArr){
-  this.type = "checkBox";
   this.id = id;
+  this.type = "checkBox";
   this.question = question;
   this.optionsArr = optionsArr;
+  this.answer = [];
 }
+// CheckBox.prototype.answer = function(){
+//   return this.answer;
+// };
 
 function DropDown(id, question, optionsArr){
-  this.type = "dropDown";
   this.id = id;
+  this.type = "dropDown";
   this.question = question;
   this.optionsArr = optionsArr;
+  this.answer = "";
 }
+// DropDown.prototype.answer = function getAnswer(){
+//   return this.answer;
+// };
 
 function OpenEnd(id, question){
-  this.type = "openEnd";
   this.id = id;
+  this.type = "openEnd";
   this.question = question;
+  this.answer = "";
 }
+// OpenEnd.prototype.answer = function getAnswer(){
+//   return this.answer;
+// };
 
 Survey.prototype.getQuestionArr = function(){
   return this.qArr;

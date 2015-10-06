@@ -19,6 +19,10 @@ div#qDisplay {
   margin: 20px auto;
 }
 
+div#showResult {
+  display: none;
+}
+
 .add-option-button {
     border: 1px solid #CCC;
     border-radius: 4px;
@@ -43,4 +47,8 @@ button.takeSurvey {
 
 div#showSurvey {
   display: none;
+}
+
+h1 {
+  text-transform:capitalize;
 }

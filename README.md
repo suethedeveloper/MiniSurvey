@@ -4,7 +4,9 @@
 
 ## Objective
 
-Create Mini Survey Engine with JavaScript, HTML, CSS, Bootstrap
+- Each question consists of the actual question, and answer options (or in the case of a text input, the text field)
+- Do not use any switch, if/else statements anywhere to distinguish between question types
+- Code should be such that if a user wanted to add 100 more question types, a user can do it without refactoring code
 
 ## Notes
 
@@ -25,8 +27,3 @@ A very basic survey engine that runs solely in javascript / HTML. With the follo
 		b. check box - multi-select options
 		c. drop down
 		d. open-ended. text input
-
-		
-	- Each question consists of the actual question, and answer options (or in the case of a text input, the text field)
-	- Do not use any switch, if/else statements anywhere to distinguish between question types
-	- Your code should be such that if I wanted to add 100 more question types, I can do it without refactoring your code
